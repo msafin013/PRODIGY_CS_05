@@ -1,0 +1,45 @@
+sage of the Packet Sniffer Tool
+
+ 1. Cloning the Repository
+   First, clone the repository to your local machine using the following command:
+   
+   git clone https://github.com/MidhunNochi/PRODIGY_CS_05.git
+   cd your-repository
+   
+
+ 2. Installing Dependencies
+   Make sure all required dependencies are installed on your Linux machine:
+   
+   sudo apt-get update
+   sudo apt-get install python3 python3-pip
+   pip3 install scapy
+   pip3 install pyshark   Optional, for advanced analysis
+   sudo apt-get install tshark   Required if using Pyshark
+   
+
+ 3. Running the Tool
+   To run the packet sniffer tool, you need to execute it with root privileges to capture network packets:
+   
+   sudo python3 packet_sniffer.py
+   
+   - Monitor Specific Network Interface:
+     If you want to monitor a specific network interface (e.g., eth0), ensure that the script is configured to target that interface, or modify it to specify the desired interface.
+
+ 4. Understanding the Output
+   The tool will capture and display the following information for each packet:
+   - Source IP Address: The IP address of the device that sent the packet.
+   - Destination IP Address: The IP address of the device that the packet is intended for.
+   - Protocol: The protocol used in the packet (e.g., TCP, UDP).
+   - Source and Destination Ports: The port numbers used in the packet (if applicable).
+   - Payload Data: The content of the packet, displayed as a string (non-printable characters are handled).
+
+
+
+
+
+   Example output:
+   
+   Source IP: 192.168.1.10 -> Destination IP: 192.168.1.1
+   Protocol: TCP | Source Port: 443 -> Destination Port: 53987
+   Payload: GET / HTTP/1.1
+   ==================================================
