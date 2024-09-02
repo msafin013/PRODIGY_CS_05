@@ -1,0 +1,58 @@
+ 1. Software Requirements:
+                            - Python Interpreter:
+                                                 - Python 3.6 or later.
+                                                 - Check if Python is installed by running:
+       
+                                                             "python3 --version"
+       
+                            - If Python is not installed, you can install it using the package manager:
+       
+                                                              "sudo apt-get install python3"
+       
+
+                            - Python Libraries:
+                            - Scapy: A library for packet manipulation.
+                            - Install using pip:
+         
+                                                               "sudo apt-get install python3-pip"
+                                                               "pip3 install scapy"
+         
+                            - Pyshark (Optional): For advanced packet analysis.
+                            - Install using pip:
+         
+                                                               "pip3 install pyshark"
+         
+
+ 2. Network Interface:
+                            - Ensure your Linux machine has a network interface (e.g., eth0, wlan0).
+                            - List available network interfaces:
+    
+                                                               "ifconfig"
+     
+
+ 3. Permissions:
+                            - Root Access: Required to capture network packets.
+                            - Run the script with sudo to grant root privileges:
+       
+                                                              "sudo python3 packet_sniffer.py"
+       
+
+ 4. Dependencies (for Pyshark):
+                            - TShark: A command-line network protocol analyzer.
+                            - Install TShark:
+       
+                                                             "sudo apt-get install tshark"
+       
+                            - Ensure TShark is in your system’s PATH.
+
+ 5. Firewall Configuration:
+                            - Make sure your firewall is configured to allow packet sniffing. You may need to adjust iptables or ufw settings to avoid blocking traffic.
+     
+
+
+Summary
+                  - OS: Linux
+                  - Software: Python 3.6+, Scapy, optional Pyshark & TShark
+                  - Permissions: Root access via sudo
+                  - Network: Access to a network interface (e.g., eth0, wlan0) 
+                  - Firewall: Proper configuration to allow traffic capture
